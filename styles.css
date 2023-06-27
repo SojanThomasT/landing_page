@@ -1,0 +1,48 @@
+:root{
+    --clr-primary-400: 233 26% 24%;
+    --fw-500:300;
+    --fw-600:400;
+    --fw-700:700;
+    --ff-primary:"Public Sans", sans-serif;
+}
+
+body{
+    margin:0;
+    font-family: var(--ff-primary);
+}
+*,*::after,*::before{
+    box-sizing:border-box;
+}
+/* default setting for making font same as body*/
+button,input{
+    font-family: inherit;
+}
+
+.flex{
+    display:flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+.container{
+    max-width: 1440px;
+    margin:auto;
+    padding:1rem;
+}
+.gap-10{
+    gap:1rem;
+}
+.flex-basis-50{
+    flex-basis: 50%;
+
+}
+
+
+h1 span{
+    display:block;
+}
