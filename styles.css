@@ -97,11 +97,11 @@ header ul{
     .flex-sm{
         flex-direction:column;
     }
-
+/* removing button in mobile view */
     header > div > div:nth-child(4){
         display:none;
     }
-
+/* menu bar is placed as below */
     header > div > div:nth-child(2){
         order:1;
         position:absolute;
@@ -110,7 +110,9 @@ header ul{
         transform:translate( -50%, -100%);
         width:100%;
         background: linear-gradient(180deg, hsl(var(--clr-neutral-400)),hsl(var(--clr-neutral-400)/0.01));
-        padding:1rem
+        padding:1rem;
+        /* transition:all 0.3s; */
+        /* anim for check and uncheck */
     }
     header > div > div:nth-child(2) ul{
         background:hsl(var(--clr-neutral-300));
@@ -118,9 +120,20 @@ header ul{
         width:80%;
         border-radius:8px;
         margin:auto;
+        text-align: center;
 
     }
-        
+    header label {
+        cursor: pointer;
     }
-    #toggle:checked ~
+    #toggle{
+        display: none;
+    }  
+    }
+    #toggle:checked ~div > div:nth-child(2){
+        top:4rem;
+        transform: translate(-50%);
+        transition:all 0.3s;
+        /* this is used only while checked */
+    }
 }
