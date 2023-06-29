@@ -29,9 +29,7 @@ body{
     box-sizing:border-box;
     margin:0;
 }
-/* to hide overflow */
-main{
-    overflow-x: hidden;
+
 }
 /* default setting for making font same as body*/
 button,input{
@@ -84,6 +82,10 @@ button{
     border-radius: 1.5rem;
     padding:0.7rem, 1.5rem;
     font-weight: var(--fw-700);
+    cursor:pointer;
+}
+button:hover{
+    opacity: 0.6;;
 }
 /* header element */
 header{
@@ -104,7 +106,29 @@ header ul{
 /* default style */
 .hero{
     position:relative;
+    padding:2rem 0;
+    height: 40rem;
+    background: url("./images/bg-intro-desktop.svg") no-repeat;
+    /* background-position: ; */
 }
+.hero p{
+    max-width: 25rem;
+}
+/* to hide overflow */
+main{
+    overflow-x: hidden;
+p{
+    color:hsl(var(--clr-neutral-400));
+    margin:1rem 0;
+    line-height: 1.5;
+}
+img[alt="mobiles"]{
+    position:asbsolute;
+    top: -25%;
+    right:-5rem;
+}
+
+
 /* media tag for moview view */
 @media screen and (max-width:768px){
     .flex-sm{
@@ -148,13 +172,22 @@ header ul{
         /* this is used only while checked */
     }
     /* main element */
-    .hero{
+    .hero-text{
         margin-top: 30rem;
+        text-align:center;
+        line-height: 1.4;
+
+    }
+    .hero-text h1{
+        font-size: var(--fs-400);
     }
     img[alt=mobiles]{
-        position:absolute;
         top:-60%;
         right:-13rem;
 
     }
+    .hero{
+        background: url("./images/bg-intro-mobile.svg") no-repeat top right;
+    }
+
 }
