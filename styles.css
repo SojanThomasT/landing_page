@@ -29,6 +29,10 @@ body{
     box-sizing:border-box;
     margin:0;
 }
+/* to hide overflow */
+main{
+    overflow-x: hidden;
+}
 /* default setting for making font same as body*/
 button,input{
     font-family: inherit;
@@ -92,6 +96,15 @@ header{
 header ul{
     list-style: none;
 }
+
+/* to hide checkbox */
+#toggle{
+    display: none;
+}  
+/* default style */
+.hero{
+    position:relative;
+}
 /* media tag for moview view */
 @media screen and (max-width:768px){
     .flex-sm{
@@ -126,14 +139,22 @@ header ul{
     header label {
         cursor: pointer;
     }
-    #toggle{
-        display: none;
-    }  
+    
     }
     #toggle:checked ~div > div:nth-child(2){
         top:4rem;
         transform: translate(-50%);
         transition:all 0.3s;
         /* this is used only while checked */
+    }
+    /* main element */
+    .hero{
+        margin-top: 30rem;
+    }
+    img[alt=mobiles]{
+        position:absolute;
+        top:-60%;
+        right:-13rem;
+
     }
 }
