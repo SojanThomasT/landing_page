@@ -63,7 +63,18 @@ h1 span{
 }
 
 h1{
+    color:hsl(var(--clr-primary-400));
     font-size: var(--fs-500);
+    font-weight: var(--fw-600);
+}
+h2{
+    color:hsl(var(--clr-primary-400));
+    font-size: var(--fs-400);
+    font-weight: var(--fw-600);
+}
+h3{
+    color:hsl(var(--clr-primary-400));
+    font-size: var(--fs-300);
     font-weight: var(--fw-600);
 }
 a{
@@ -109,7 +120,8 @@ header ul{
     padding:2rem 0;
     height: 40rem;
     background: url("./images/bg-intro-desktop.svg") no-repeat;
-    /* background-position: ; */
+    /* background-position:Hopri-offset value vvert_offset  value; */
+    background-position: left 46vw top 72%;
 }
 .hero p{
     max-width: 25rem;
@@ -128,7 +140,20 @@ img[alt="mobiles"]{
     right:-5rem;
 }
 
+/* why choose easy bank section */
+.why-easybank{
+    padding:5rem 0;
+    background-color: hsl(var(--clr-neutral-300));
 
+}
+.why-easybank > div > div{
+    margin-top:3rem;
+    gap:2rem; 
+
+}
+.why-easybank > div > div img{
+    margin-bottom:1rem;
+}
 /* media tag for moview view */
 @media screen and (max-width:768px){
     .flex-sm{
